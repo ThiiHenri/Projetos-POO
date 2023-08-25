@@ -1,3 +1,6 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Carro {
@@ -26,6 +29,14 @@ public class Carro {
         else
             System.out.println("Invalido");
 
-    }
+        placa = placa.toUpperCase();
+        for(int i=0;i<placa.length();i++)
+        {
+            if (placa.charAt(i)=='A'||placa.charAt(i)=='E'||placa.charAt(i)=='I'||placa.charAt(i)=='O'||placa.charAt(i)=='U')
+             placa = placa.replace(placa.charAt(i),'*');
+        }
 
+        System.out.println("Placa alterada" + placa);
+
+    }
 }
